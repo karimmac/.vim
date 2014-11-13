@@ -23,13 +23,11 @@ set hlsearch	" incremental search highlighting
 " Initialise pathogen to load plugins from .vim/bundle
 execute pathogen#infect()
 
-"-- 
-"-- " Text colouring
-"-- colo sri                " use sri's colorscheme: https://github.com/tempire/dotvim/blob/master/colors/sri.vim (modified)
-"--                         "
-"--                         " ... except the shitty distracting cyan brace matching
-"-- highlight MatchParen cterm=bold ctermfg=cyan ctermbg=black
-"-- 
+" Text colouring
+colo sri                " use sri's colorscheme: https://github.com/tempire/dotvim/blob/master/colors/sri.vim (modified)
+                        " ... except the shitty distracting cyan brace matching
+highlight MatchParen cterm=bold ctermfg=cyan ctermbg=black
+
 "-- set ignorecase          " ignore case in search patterns ...
 "-- set smartcase           " ... unless pattern contains uppercase
 "-- set incsearch           " do incremental searching
