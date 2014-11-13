@@ -20,8 +20,8 @@ set gdefault    " :%s/foo/bar replaces in whole file not just current line
 set hlsearch	" incremental search highlighting
 
 " Bundle options
-" Initialise pathogen to allow loading plugins from ~/.vim/bundle
-"-- execute pathogen#infect()
+" Initialise pathogen to load plugins from .vim/bundle
+execute pathogen#infect()
 
 "-- 
 "-- " Text colouring
