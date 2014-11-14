@@ -82,49 +82,49 @@ au Syntax * RainbowParenthesesLoadBraces
 "--   au FileType ruby                setl sw=2 sts=2 expandtab list
 "--   au FileType javascript          setl sw=2 sts=2 expandtab list
 "-- endif
-"-- 
-"-- "
-"-- " Keyboard shortcuts
-"-- "
-"-- 
-"-- " Move up and down by screen lines not file lines
-"-- nnoremap j gj
-"-- nnoremap k gk
-"-- 
-"-- " If you hit F1 accidentally, this should be the same as escape!
-"-- inoremap <f1> <esc>
-"-- nnoremap <f1> <esc>
-"-- vnoremap <f1> <esc>
-"-- 
-"-- " start leader commands with comma instead of the default backslash
-"-- let mapleader = ","
-"-- 
-"-- " Strip all trailing while space by pressing ,w
-"-- nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
-"-- 
-"-- " Fold HTML tags using ,ft
-"-- nnoremap <leader>ft Vatzf
-"-- " Fold paragraphs using ,fp
-"-- nnoremap <leader>fp Vapzf
-"-- 
-"-- " Split window and move to new pane using ,v
-"-- nnoremap <leader>v <C-w>v<C-w>l<cr>
-"-- " Horizontal split using ,s
-"-- nnoremap <leader>s <C-w>s<C-w>j<cr>
-"-- 
-"-- " Clear annoying search highlighting with ', '
-"-- map <leader><space> :noh<cr>
-"-- 
-"-- " Center the current diff hunk when navigating diffs
-"-- nmap ]c ]czz
-"-- nmap [c [czz
-"-- 
-"-- " :W should save as well
-"-- command W w
-"-- command Wq wq
-"-- command WQ wq
-"-- command Q q
-"-- 
+
+"
+" Keyboard shortcuts
+"
+
+" Move up and down by screen lines not file lines
+nnoremap j gj
+nnoremap k gk
+
+" Hitting F1 accidentally should be the same as escape!
+inoremap <f1> <esc>
+nnoremap <f1> <esc>
+vnoremap <f1> <esc>
+
+" start leader commands with comma instead of the default backslash
+let mapleader = ","
+
+" Strip all trailing while space with ,w
+nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Fold HTML tags with ,ft
+nnoremap <leader>ft Vatzf
+" Fold paragraphs with ,fp
+nnoremap <leader>fp Vapzf
+
+" Split window and move to new pane with ,v
+nnoremap <leader>v <C-w>v<C-w>l<cr>
+" Horizontal split with ,s
+nnoremap <leader>s <C-w>s<C-w>j<cr>
+
+" Clear annoying search highlighting with ', '
+map <leader><space> :noh<cr>
+
+" Center the current diff hunk when navigating diffs
+nmap ]c ]czz
+nmap [c [czz
+
+" :W should save as well
+command W w
+command Wq wq
+command WQ wq
+command Q q
+
 "-- "
 "-- " Bundle options
 "-- "
