@@ -50,38 +50,38 @@ let g:rbpt_colorpairs = [
     \ ]
 let g:rbpt_max = 9
 
-"au VimEnter * RainbowParenthesesToggle
-au BufEnter * RainbowParenthesesToggle
-au BufLeave * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+if has("autocmd")
+  "au VimEnter * RainbowParenthesesToggle
+  au BufEnter * RainbowParenthesesToggle
+  au BufLeave * RainbowParenthesesToggle
+  au Syntax * RainbowParenthesesLoadRound
+  au Syntax * RainbowParenthesesLoadSquare
+  au Syntax * RainbowParenthesesLoadBraces
+  
+  filetype plugin indent on
 
-"-- if has("autocmd")
-"--   filetype plugin indent on
-"-- 
-"--   " Turn off line wrap for common files
-"--   au BufNewFile,BufRead db.*	setlocal nowrap
-"--   au BufNewFile,BufRead /etc/*	setlocal nowrap
-"-- 
-"--   au BufNewFile,BufRead,StdinReadPost *
-"--     \ let s:l1 = getline(1) |
-"--     \ if s:l1 =~ '^Return-Path: ' |
-"--     \   setf mail |
-"--     \ endif
-"-- 
-"--   au BufReadPost *
-"--     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-"--     \   exe "normal g`\"" |
-"--     \ endif
-"-- 
-"--   au BufRead,BufNewFile *.go      set filetype=go
-"-- 
-"--   au FileType html                setl sw=2 sts=2 expandtab list tw=0 nowrap
-"--   au FileType scss,css            setl sw=2 sts=2 expandtab list tw=0
-"--   au FileType ruby                setl sw=2 sts=2 expandtab list
-"--   au FileType javascript          setl sw=2 sts=2 expandtab list
-"-- endif
+  " Turn off line wrap for common files
+  au BufNewFile,BufRead db.*	setlocal nowrap
+  au BufNewFile,BufRead /etc/*	setlocal nowrap
+
+  au BufNewFile,BufRead,StdinReadPost *
+    \ let s:l1 = getline(1) |
+    \ if s:l1 =~ '^Return-Path: ' |
+    \   setf mail |
+    \ endif
+
+  au BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+
+  " Filetype customisations
+  au BufRead,BufNewFile *.go      set filetype=go
+  au FileType html                setl sw=2 sts=2 expandtab list tw=0 nowrap
+  au FileType scss,css            setl sw=2 sts=2 expandtab list tw=0
+  au FileType ruby                setl sw=2 sts=2 expandtab list
+  au FileType javascript          setl sw=2 sts=2 expandtab list
+endif
 
 "
 " Keyboard shortcuts
@@ -124,10 +124,3 @@ command W w
 command Wq wq
 command WQ wq
 command Q q
-
-"-- "
-"-- " Bundle options
-"-- "
-"-- 
-"-- " vim-slime options
-"-- let g:slime_target = "tmux"
