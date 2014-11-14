@@ -7,17 +7,25 @@ set noswapfile  " modern times, vim
 set modeline    " read mode line
 set modelines=10
 set vb		" use a visual flash instead of beeping
-set ru		" display column, line info
+set ru		" display column, line numbers
 set ai		" always do autoindenting
 set sw=2	" indent 2 spaces
 set sts=2	" tabstop 2 spaces
 set tw=78	" limit text to 78 spaces
-syn on		" enable syntax highlighting
 set nu		" line numbers please
+set listchars=tab:^.,trail:?
+set scrolloff=2 " always leave 2 lines above/below cursor
+set wildmenu    " pop menu with completions
+set wildmode=list:longest,full
+set backspace=indent,eol,start
+syn on		" enable syntax highlighting
 
 " Search options
 set gdefault    " :%s/foo/bar replaces in whole file not just current line
 set hlsearch	" incremental search highlighting
+set ignorecase  " ignore case in search patterns ...
+set smartcase   " ... unless pattern contains uppercase
+set incsearch   " do incremental searching
 
 " Bundle options
 " Initialise pathogen to load plugins from .vim/bundle
@@ -28,17 +36,6 @@ colo sri                " use sri's colorscheme: https://github.com/tempire/dotv
                         " ... except the shitty distracting cyan brace matching
 highlight MatchParen cterm=bold ctermfg=cyan ctermbg=black
 
-"-- set ignorecase          " ignore case in search patterns ...
-"-- set smartcase           " ... unless pattern contains uppercase
-"-- set incsearch           " do incremental searching
-"-- set listchars=tab:^.,trail:?
-"-- set scrolloff=2         " always leave 2 lines above/below cursor
-"-- set ruler               " show line numbers
-"-- 
-"-- set wildmenu            " pop menu with completions
-"-- set wildmode=list:longest,full
-"-- 
-"-- set backspace=indent,eol,start
 "-- 
 "-- if has("autocmd")
 "--   filetype plugin indent on
