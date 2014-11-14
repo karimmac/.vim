@@ -32,10 +32,11 @@ set incsearch   " do incremental searching
 execute pathogen#infect()
 
 " Shenanigans to get 256 colours in Cmder on Windows
-"-- set term=xterm
-"-- set t_Co=256
-"-- let &t_AB="\e[48;5;%dm"
-"-- let &t_AF="\e[38;5;%dm"
+" unfortunately one-linifies Vim in a non-Cmder Win prompt.
+set term=xterm
+set t_Co=256
+let &t_AB="\e[48;5;%dm"
+let &t_AF="\e[38;5;%dm"
 
 " Text colouring
 colo sri                " use sri's colorscheme: https://github.com/tempire/dotvim/blob/master/colors/sri.vim (modified)
