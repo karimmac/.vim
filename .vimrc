@@ -6,23 +6,24 @@ set nocompatible " Docs suggest this isn't really needed...
 set noswapfile  " modern times, vim
 set modeline    " read mode line
 set modelines=10
-set vb		" use a visual flash instead of beeping
-set ru		" display column, line numbers
-set ai		" always do autoindenting
-set sw=2	" indent 2 spaces
-set sts=2	" tabstop 2 spaces
-set tw=78	" limit text to 78 spaces
-set nu		" line numbers please
+set vb          " use a visual flash instead of beeping
+set ru          " display column, line numbers
+set ai          " always do autoindenting
+set sw=2        " indent 2 spaces
+set sts=2       " tabstop 2 spaces
+set tw=78       " limit text to 78 spaces
+set nu           " line numbers please
 set listchars=tab:^.,trail:?
 set scrolloff=2 " always leave 2 lines above/below cursor
 set wildmenu    " pop menu with completions
 set wildmode=list:longest,full
 set backspace=indent,eol,start
-syn on		" enable syntax highlighting
+set list        " show tabs
+syn on          " enable syntax highlighting
 
 " Search options
 set gdefault    " :%s/foo/bar replaces in whole file not just current line
-set hlsearch	" incremental search highlighting
+set hlsearch    " incremental search highlighting
 set ignorecase  " ignore case in search patterns ...
 set smartcase   " ... unless pattern contains uppercase
 set incsearch   " do incremental searching
@@ -64,12 +65,12 @@ if has("autocmd")
   au Syntax * RainbowParenthesesLoadRound
   au Syntax * RainbowParenthesesLoadSquare
   au Syntax * RainbowParenthesesLoadBraces
-  
+
   filetype plugin indent on
 
   " Turn off line wrap for common files
-  au BufNewFile,BufRead db.*	setlocal nowrap
-  au BufNewFile,BufRead /etc/*	setlocal nowrap
+  au BufNewFile,BufRead db.*    setlocal nowrap
+  au BufNewFile,BufRead /etc/*  setlocal nowrap
 
   au BufNewFile,BufRead,StdinReadPost *
     \ let s:l1 = getline(1) |
@@ -83,11 +84,12 @@ if has("autocmd")
     \ endif
 
   " Filetype customisations
-  au BufRead,BufNewFile *.go      set filetype=go
-  au FileType html                setl sw=2 sts=2 expandtab list tw=0 nowrap
-  au FileType scss,css            setl sw=2 sts=2 expandtab list tw=0
-  au FileType ruby                setl sw=2 sts=2 expandtab list
-  au FileType javascript          setl sw=2 sts=2 expandtab list
+  au BufRead,BufNewFile *.go  set filetype=go
+  au FileType html            setl sw=2 sts=2 expandtab list tw=0 nowrap
+  au FileType scss,css        setl sw=2 sts=2 expandtab list tw=0
+  au FileType ruby            setl sw=2 sts=2 expandtab list
+  au FileType javascript      setl sw=2 sts=2 expandtab list
+  au FileType h,c,cpp         setl sw=4 sts=4 tw=4 expandtab list
 endif
 
 "
