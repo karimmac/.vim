@@ -1,5 +1,7 @@
 " Karim's VIM configuration
 
+set rtp+=~/vimfiles " newer Windows Git switched from vimfiles to .vim .
+
 set encoding=utf-8 " default encoding for files
 set hidden
 set nocompatible " Docs suggest this isn't really needed...
