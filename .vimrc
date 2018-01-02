@@ -123,6 +123,11 @@ nnoremap <leader>v <C-w>v<C-w>l<cr>
 " Horizontal split with ,s
 nnoremap <leader>s <C-w>s<C-w>j<cr>
 
+" taglist bindings
+nnoremap <leader>tt :TlistToggle<cr>
+nnoremap <leader>ts :TlistSync<cr>
+nnoremap <leader>tu :TlistUpdate<cr>
+
 " Clear annoying search highlighting with ', '
 map <leader><space> :noh<cr>
 
